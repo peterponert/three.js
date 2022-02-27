@@ -520,7 +520,7 @@
 			function followZoom(event){
 				let x = (event.offsetX / scope.domElement.clientWidth) * 2 -1,
 				y = -(event.offsetY / scope.domElement.clientHeight) * 2 + 1,
-				v = new Vector3(x, y, 0);
+				v = new THREE.Vector3(x, y, 0);
 	
 				v.unproject(scope.object);
 				v.sub(scope.object.position).setLength(scope.zoomSpeed * 10) // it needs more speed here;
